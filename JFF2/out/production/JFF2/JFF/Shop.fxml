@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="724.0" prefWidth="986.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JFF.Shop">
+   <children>
+      <Text layoutX="15.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="getCustomerName" layoutX="151.0" layoutY="76.0" />
+      <Text layoutX="14.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer E-mail">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="getCustomerMail" layoutX="151.0" layoutY="119.0" />
+      <Text layoutX="38.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buy Item">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Code" wrappingWidth="78.34716796875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="573.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" wrappingWidth="78.34716796875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="getSubmit" layoutX="218.0" layoutY="588.0" mnemonicParsing="false" onAction="#submitItems" text="Submit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="575.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Invoice">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="201.0" layoutY="677.0" mnemonicParsing="false" onAction="#newOrder" prefHeight="39.0" prefWidth="116.0" text="New Order">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="50.0" layoutY="677.0" mnemonicParsing="false" onAction="#getPayment" prefHeight="39.0" prefWidth="116.0" text="Payment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text fill="#7760bc" layoutX="21.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JFF FISHING SHACK">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="34.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="getAddress" layoutX="151.0" layoutY="161.0" />
+      <Text layoutX="25.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="115.9999930858612">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="getDate" layoutX="147.0" layoutY="203.0" prefHeight="25.0" prefWidth="158.0" />
+      <ComboBox fx:id="itemList" layoutX="151.0" layoutY="452.0" prefWidth="150.0" />
+      <ComboBox fx:id="codeList" layoutX="151.0" layoutY="502.0" prefWidth="150.0" />
+      <TableView fx:id="itemTable" layoutX="17.0" layoutY="243.0" prefHeight="134.0" prefWidth="321.0">
+        <columns>
+          <TableColumn fx:id="colomitem" prefWidth="122.0" text="Item" />
+            <TableColumn fx:id="colomcode" prefWidth="93.0" text="code" />
+            <TableColumn fx:id="colomprice" prefWidth="106.0" text="price(each)" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnLoad" layoutX="185.0" layoutY="398.0" mnemonicParsing="false" onAction="#loadData" text="View Items">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="33.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Order" wrappingWidth="100.8706111907959">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="556.0" layoutY="511.0" />
+      <TextField fx:id="getTotal" layoutX="158.0" layoutY="633.0" promptText="Total" />
+      <ComboBox fx:id="amountList" layoutX="157.0" layoutY="547.0" prefWidth="150.0" />
+      <Button layoutX="349.0" layoutY="677.0" mnemonicParsing="false" onAction="#getQuuarrey" prefHeight="39.0" prefWidth="116.0" text="Quarrey">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="shopid" layoutX="565.0" layoutY="64.0" prefHeight="24.0" prefWidth="172.0" />
+      <Label fx:id="shopAddress" layoutX="407.0" layoutY="113.0" prefHeight="108.0" prefWidth="264.0" />
+      <Label fx:id="shopiRecipt" layoutX="407.0" layoutY="243.0" prefHeight="24.0" prefWidth="172.0" text="Receipt">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopDate" layoutX="727.0" layoutY="243.0" prefHeight="24.0" prefWidth="172.0" text="Date">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopCustomerName" layoutX="407.0" layoutY="300.0" prefHeight="24.0" prefWidth="220.0" text="Customer Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopCustomerAddress" layoutX="403.0" layoutY="343.0" prefHeight="97.0" prefWidth="264.0" text="Customer Address">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopItem" layoutX="401.0" layoutY="531.0" prefHeight="39.0" prefWidth="172.0" text="Item">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopCode" layoutX="583.0" layoutY="531.0" prefHeight="39.0" prefWidth="172.0" text="Code">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopAmount" layoutX="792.0" layoutY="528.0" prefHeight="39.0" prefWidth="172.0" text="Amount">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopTotal" layoutX="651.0" layoutY="570.0" prefHeight="24.0" prefWidth="172.0" text="Total">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopRegards" layoutX="432.0" layoutY="603.0" prefHeight="62.0" prefWidth="380.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="shopCustomerNo" layoutX="403.0" layoutY="440.0" prefHeight="24.0" prefWidth="172.0" text="Customer No">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopCustomerMail" layoutX="403.0" layoutY="490.0" prefHeight="24.0" prefWidth="220.0" text="Customer Mail">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="shopInvoice" layoutX="583.0" layoutY="77.0" prefHeight="24.0" prefWidth="172.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
